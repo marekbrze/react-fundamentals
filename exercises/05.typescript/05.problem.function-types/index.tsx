@@ -1,17 +1,17 @@
 import { createRoot } from 'react-dom/client'
 
-// TODO: 🦺 create an OperationFn type that represents the common shape of the
+//  🦺 create an OperationFn type that represents the common shape of the
 // operation functions below
 
 type OperationFn = (left: number, right: number) => number;
 
-// TODO: 🦺 create an Operator type that's set to the union of +, -, *, and /
+//  🦺 create an Operator type that's set to the union of +, -, *, and /
 // 🦉 Note: you cannot use "keyof typeof operations" anymore because of a
 // circul ar dependency here
 
 type Operator = '+' | '-' | '*' | '/'
 
-// TODO: 🦺 cast the operations variable to a Record of the Operator type and the OperationFn type
+//  🦺 cast the operations variable to a Record of the Operator type and the OperationFn type
 const operations: Record<Operator, OperationFn> = {
   // 🦺 remove all the ": number" from these functions
   '+': (left, right) => left + right,
